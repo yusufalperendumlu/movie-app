@@ -1,0 +1,295 @@
+:root {
+    --primary-color: linear-gradient(to right, #005d8f , #00334e, #001b2a);
+    --secondary-color: #0e1f36cd;
+    --sexy-color: #0e1b23;
+  }
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track 
+{
+    background: var(--secondary-color);
+}
+  
+::-webkit-scrollbar-thumb 
+{
+    background: #222831;
+}
+
+body
+{
+    font-family: sans-serif;
+    margin: 0;
+    background: var(--primary-color);
+    overflow-x: hidden;
+    scroll-margin-inline-start: 10rem;
+    user-select: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    background: #17133776;
+    letter-spacing: 1rem;
+}
+
+header 
+{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sexy-color);
+    width: 100%;
+    position: relative;
+    padding: 1.5rem;
+    z-index: 999;
+    position: fixed;
+    overflow: hidden;
+}
+
+header h3 
+{
+    color: #111111;
+    margin: 0;
+    font-size: 2rem;
+    padding-left: 3rem;
+    cursor: pointer;
+    font-weight: 1000;
+}
+
+.mn
+{
+    line-height: 80px;
+    padding: 0 2px;
+    font-weight: 400;
+}
+
+.checkdnm
+{
+    display: none;
+}
+
+.checkbtn 
+{
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 80px;
+    cursor: pointer;
+    
+}
+
+ul li 
+{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+
+ul li a:hover, ul li a:active
+{
+    cursor: pointer;
+    color: #ffffff;
+    overflow-wrap: normal;
+
+}
+
+#check:checked ~ ul 
+{
+    top: 0;
+    margin-top: 95px;
+}
+
+ul
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    top: -100%;
+    left: 0;
+    text-align: center;
+    transition: calc(0.3s);
+    opacity: 0.9;
+}
+
+.menu
+{
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.dark-light
+{
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    margin: left 2rem;
+    padding: 1rem;
+    font-size: 20px;
+    border: none;
+}
+
+.dark-light.turn
+{
+    transform: rotateZ(360deg);
+    transition: transform 0.3s linear;
+}
+
+form .search
+{
+    position: absolute;
+    margin: 0.9rem -65%;
+}
+
+.search 
+{
+    background-color: rgb(232, 232, 232);
+    border: 3px solid var(--secondary-color);
+    width: 45%;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--sexy-color);
+    text-indent: 1.7rem;
+}
+
+.search::placeholder 
+{
+    color: #222831;
+    opacity: 0.9;
+}
+  
+.search:focus
+{
+    outline: none;
+    border: 3px solid #844800;
+    transition: 0.2s ease-in;
+    box-shadow: 0 0 10px 0 #844800;
+}
+
+main 
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+.movie 
+{
+    height: 37rem;
+    width: 300px;
+    margin: 1rem;
+    background-color: #002a40;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+  
+.movie img 
+{
+    width: 100%;
+}
+  
+.movie-info 
+{
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+  
+.movie-info h3 
+{
+    margin-top: 0;
+    color: #000000d6;
+    padding: 0.25rem 0.8rem;
+}
+  
+.movie-info span 
+{
+    background-color: #212046;
+    padding: 0.25rem 0.8rem;
+    border-radius: 16px;
+    width: 64px;
+    text-align: center;
+    font-weight: bold;
+}
+  
+.movie-info span.green 
+{
+    color: lightgreen;
+}
+
+.movie-info span.orange
+{
+    color: orange;
+}
+  
+.movie-info span.red
+{
+    color: red;
+}
+  
+.overview
+{
+    background-color: #43483a;
+    border-radius: 10px;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: 0.5s;
+    cursor: context-menu;
+    opacity: 0.8;
+    color: #fff;
+  }
+  
+.movie:hover .overview 
+{
+    transform: translateY(0);
+}
+  
+.active-main 
+{
+    background-color: #eff3f6;
+}
+  
+.active-navbar 
+{
+    background-color: #59626a;
+}
+  
+.active-movie 
+{
+    background-color: #ced7df;
+}
+  
