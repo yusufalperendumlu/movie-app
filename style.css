@@ -227,7 +227,7 @@ main
 .movie-info h3 
 {
     margin-top: 0;
-    color: #000000d6;
+    color: #ccd4d8;
     padding: 0.25rem 0.8rem;
 }
   
@@ -280,7 +280,7 @@ main
   
 .active-main 
 {
-    background-color: #eff3f6;
+    background-color: #eff8ffde;
 }
   
 .active-navbar 
